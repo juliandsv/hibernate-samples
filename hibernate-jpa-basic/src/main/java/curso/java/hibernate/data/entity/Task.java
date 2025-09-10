@@ -18,6 +18,13 @@ public class Task implements Serializable {
     private String taskDescription;
     @Column
     private Integer employeeId;
+    
+    @ManyToOne(fetch = FetchType.LAZY)           
+    @JoinColumn(name = "id_scope")              
+    private Scope scope;
+
+    public Scope getScope() { return scope; }
+    public void setScope(Scope scope) { this.scope = scope; }
 
     public Integer getEmployeeId() {
         return employeeId;

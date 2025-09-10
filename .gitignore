@@ -1,1 +1,8 @@
 /hibernate-examples/target/
+/target/
+**/target/
+*.iml
+.idea/
+.classpath
+.project
+.settings/
